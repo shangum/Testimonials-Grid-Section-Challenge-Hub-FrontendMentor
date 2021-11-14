@@ -1,0 +1,270 @@
+@use 'sass:math';
+
+/* Color Definitions */
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+/* Other Variables */
+$font-size: 13px;
+$font-family: 'Barlow Semi Condensed';
+
+@font-face {
+    font-family: $font-family;
+    src: url('../fonts/BarlowSemiCondensed-Regular.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: $font-family;     
+    src: url('../fonts/BarlowSemiCondensed-SemiBold.ttf');
+    font-weight: 600;
+}
+
+/*Convert pixels to rem*/
+/*use toRem(400px) --> 25rem */
+@function toRem($value) {    
+    @return math.div($value, 16px) * 1rem;
+}
+
+body {
+    font-size: $font-size;
+    font-family: $font-family;
+    background-color: $light-grayish-blue;
+}
+
+.content-main {    
+    height: auto;
+}
+
+.quote-header {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: toRem(15px);
+}
+
+.quote-header-pad-right {
+    padding-right: toRem(30px);
+}
+
+.quote-body {
+    color: hsla(0, 0%, 100%, 0.7);    
+    padding-right: toRem(30px);
+}
+
+.quote-body-extra-pad-right{
+    padding-right: toRem(40px) !important;
+}
+
+.quote-header-dark {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: toRem(15px);
+}
+
+.dark-text {
+    color: $very-dark-grayish-blue !important;
+}
+
+.content-grid {
+    display: grid;    
+    row-gap: toRem(18px);    
+    column-gap: toRem(45px);
+    justify-content: center;    
+    grid-template-rows: toRem(275px) toRem(250px);
+    grid-template-columns: toRem(250px) toRem(250px) toRem(250px) toRem(250px);
+    grid-template-areas: 
+    "A A B E"
+    "C D D E";
+
+    align-content: center;    
+    height: toRem(900px);    
+    padding-left: toRem(100px);
+    padding-right: toRem(100px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: toRem(1440px);
+
+}
+
+.section {
+    padding: toRem(25px);
+    border-radius: toRem(10px);
+}
+
+.section-w-1 {    
+    width: toRem(220px);
+}
+
+
+.section-w-2 {
+    width: toRem(500px);
+}
+
+.section-dan {    
+    grid-area: A;
+    background-color: $moderate-violet;
+    color: $white;
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;    
+    background-position-x: 81%;
+    
+}
+
+.section-jon {
+    grid-area: B;
+    background-color: $very-dark-grayish-blue;
+    color: $white; 
+    justify-self: end;
+}
+
+.section-jea {
+    grid-area: C;
+    background-color: $white;
+}
+
+.section-pat {
+    grid-area: D;
+    background-color: $very-dark-blackish-blue;
+    color: $white;
+    justify-self: end;
+}
+
+.section-kir {    
+    grid-area: E;
+    background-color: $white;    
+    justify-self: end;
+}
+
+.profile-info-grid{
+    display: grid;
+    grid-template-columns: toRem(40px) toRem(120px);    
+    grid-template-areas: 
+        "X V";
+    
+    margin-bottom: toRem(15px);
+}
+
+.profile-image {
+    grid-area: X;
+    border-radius: toRem(30px);    
+    border-color: hsla(0, 0%, 100%, 0.7);    
+    border-style: solid;
+    border-width: toRem(2px);
+    width: toRem(31px);
+    height: toRem(31px);
+}
+
+.profile-name-and-position {
+    grid-area: V;
+    margin-left: toRem(10px);
+}
+
+.profile-name {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.profile-position {
+    font-size: 1.0em;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+@media only screen and (min-width: toRem(375px)) and (max-width: toRem(1025px))
+{    
+    
+    .content-main {        
+        height: auto;
+    }
+
+    .quote-header {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: toRem(15px);
+    }
+
+    .quote-body-extra-pad-right{
+        padding-right: toRem(35px) !important;
+    }
+
+    .content-grid {
+        display: grid;        
+        row-gap: toRem(18px);        
+        column-gap: toRem(45px);
+        justify-content: center;        
+        grid-template-columns: unset;        
+        grid-template-rows: auto 1fr 1fr auto auto;
+        grid-template-areas: unset;
+            
+        align-content: space-between;        
+        height: 100%;        
+        padding-left: toRem(10px);
+        padding-right: toRem(10px);
+        margin-top: toRem(75px);
+        margin-left: auto;
+        margin-right: auto;
+        max-width: toRem(375px);
+    
+    }
+
+    .section-w-1 {        
+
+        width: toRem(250px);
+    }
+    
+    
+    .section-w-2 {
+
+        width: toRem(250px);
+    }
+
+    .section-dan {
+        
+        grid-area: unset;        
+        
+    }
+    
+    .section-jon {
+
+        grid-area: unset;        
+    }
+    
+    .section-jea {
+
+        grid-area: unset;        
+    }
+    
+    .section-pat {
+
+        grid-area: unset;        
+    }
+    
+    .section-kir {        
+
+        grid-area: unset;        
+    }
+
+
+    .attribution { 
+
+        font-size: 11px; 
+        text-align: center;
+        margin-top: toRem(50px);
+        margin-left: auto;
+        margin-right: auto;
+    }    
+
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+
+    color: hsl(228, 45%, 44%); 
+}

@@ -1,0 +1,228 @@
+/* Color Definitions */
+/* Other Variables */
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("../fonts/BarlowSemiCondensed-Regular.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("../fonts/BarlowSemiCondensed-SemiBold.ttf");
+  font-weight: 600;
+}
+/*Convert pixels to rem*/
+/*use toRem(400px) --> 25rem */
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed";
+  background-color: #ecf2f8;
+}
+
+.content-main {
+  height: auto;
+}
+
+.quote-header {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.9375rem;
+}
+
+.quote-header-pad-right {
+  padding-right: 1.875rem;
+}
+
+.quote-body {
+  color: rgba(255, 255, 255, 0.7);
+  padding-right: 1.875rem;
+}
+
+.quote-body-extra-pad-right {
+  padding-right: 2.5rem !important;
+}
+
+.quote-header-dark {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.9375rem;
+}
+
+.dark-text {
+  color: #48556a !important;
+}
+
+.content-grid {
+  display: grid;
+  row-gap: 1.125rem;
+  column-gap: 2.8125rem;
+  justify-content: center;
+  grid-template-rows: 17.1875rem 15.625rem;
+  grid-template-columns: 15.625rem 15.625rem 15.625rem 15.625rem;
+  grid-template-areas: "A A B E" "C D D E";
+  align-content: center;
+  height: 56.25rem;
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90rem;
+}
+
+.section {
+  padding: 1.5625rem;
+  border-radius: 0.625rem;
+}
+
+.section-w-1 {
+  width: 13.75rem;
+}
+
+.section-w-2 {
+  width: 31.25rem;
+}
+
+.section-dan {
+  grid-area: A;
+  background-color: #7541c8;
+  color: white;
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: 81%;
+}
+
+.section-jon {
+  grid-area: B;
+  background-color: #48556a;
+  color: white;
+  justify-self: end;
+}
+
+.section-jea {
+  grid-area: C;
+  background-color: white;
+}
+
+.section-pat {
+  grid-area: D;
+  background-color: #19212e;
+  color: white;
+  justify-self: end;
+}
+
+.section-kir {
+  grid-area: E;
+  background-color: white;
+  justify-self: end;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: 2.5rem 7.5rem;
+  grid-template-areas: "X V";
+  margin-bottom: 0.9375rem;
+}
+
+.profile-image {
+  grid-area: X;
+  border-radius: 1.875rem;
+  border-color: rgba(255, 255, 255, 0.7);
+  border-style: solid;
+  border-width: 0.125rem;
+  width: 1.9375rem;
+  height: 1.9375rem;
+}
+
+.profile-name-and-position {
+  grid-area: V;
+  margin-left: 0.625rem;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.profile-position {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media only screen and (min-width: 23.4375rem) and (max-width: 64.0625rem) {
+  .content-main {
+    height: auto;
+  }
+
+  .quote-header {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.9375rem;
+  }
+
+  .quote-body-extra-pad-right {
+    padding-right: 2.1875rem !important;
+  }
+
+  .content-grid {
+    display: grid;
+    row-gap: 1.125rem;
+    column-gap: 2.8125rem;
+    justify-content: center;
+    grid-template-columns: unset;
+    grid-template-rows: auto 1fr 1fr auto auto;
+    grid-template-areas: unset;
+    align-content: space-between;
+    height: 100%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    margin-top: 4.6875rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 23.4375rem;
+  }
+
+  .section-w-1 {
+    width: 15.625rem;
+  }
+
+  .section-w-2 {
+    width: 15.625rem;
+  }
+
+  .section-dan {
+    grid-area: unset;
+  }
+
+  .section-jon {
+    grid-area: unset;
+  }
+
+  .section-jea {
+    grid-area: unset;
+  }
+
+  .section-pat {
+    grid-area: unset;
+  }
+
+  .section-kir {
+    grid-area: unset;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 3.125rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=styles.css.map */
